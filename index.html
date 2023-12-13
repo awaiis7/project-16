@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="26.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #1C1C1C;
+            color: white;
+        }
+
+        header .navbar {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+        }
+
+        .navbar h2 {
+            padding: 15px;
+        }
+
+        header .anchor {
+            padding: 15px;
+        }
+
+        .anchor a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+
+        header {
+            background-image: url(hero-bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        header .section {
+            background-color: rgba(0, 0, 0, 0.5)
+        }
+
+        header .text {
+            padding: 18% 20%;
+        }
+
+        .text p {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .circle {
+            display: flex;
+            width: 80%;
+            justify-content: flex-end;
+        }
+
+        .white {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            margin: 5px;
+        }
+
+        .yellow {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #F1DB25;
+            margin: 5px;
+        }
+
+        .section1 {
+            width: 70%;
+            margin: auto;
+            margin-top: 3%;
+            position: relative;
+        }
+
+        .section1 .img1 {
+            width: 400px;
+            height: 220px;
+        }
+
+        .img1 img {
+            width: 100%;
+        }
+
+        .section1 .part {
+            background-color: white;
+            width: 45%;
+            position: absolute;
+            top: 8%;
+            left: 35%;
+            padding: 20px;
+        }
+
+        .part button {
+            background-color: #F1DB25;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            margin-top: 10px;
+        }
+
+        #bar {
+            background-color: #F1DB25;
+            width: 50px;
+            height: 10px;
+            border-radius: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .section2 {
+            background-color: rgba(0, 0, 0);
+            padding-bottom: 30px;
+        }
+
+        .services {
+            width: 70%;
+            margin: auto;
+            text-align: center;
+            margin-top: 8%;
+            padding-top: 30px;
+        }
+
+        .services h2 {
+            color: white;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .bar1 {
+            background-color: #F1DB25;
+            width: 50px;
+            height: 10px;
+            border-radius: 20px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .parts {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .parts .home {
+            width: 28%;
+            text-align: center;
+            padding: 15px;
+            background-color: white;
+        }
+
+        .home .img2 {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        .img2 img {
+            width: 100%;
+        }
+
+        .section2 button {
+            background-color: #F1DB25;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            margin-top: 10px;
+            border: 1px solid yellow;
+        }
+
+        button:hover {
+            background-color: transparent;
+            color: #F1DB25;
+        }
+
+        .section3 {
+            width: 70%;
+            margin: auto;
+            text-align: center;
+            position: relative;
+            margin-top: 5%;
+        }
+
+        .section3 .img3 {
+            width: 180px;
+            height: 140px;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .img3 img {
+            width: 100%;
+        }
+
+        .icon1 {
+            background-color: black;
+            border-radius: 50%;
+            width: 50px;
+            padding: 15px;
+            position: absolute;
+            top: 50%;
+        }
+
+        .icon2 {
+            background-color: black;
+            border-radius: 50%;
+            width: 50px;
+            padding: 15px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+        }
+
+        .section4 {
+            background-image: url(contact-bg.jpg);
+            background-size: cover;
+            text-align: center;
+            color: white;
+            padding-top: 5%;
+            margin-top: 3%;
+            padding-bottom: 50px;
+            height: 500px;
+        }
+
+        .section4 input {
+            width: 30%;
+            margin-top: 20px;
+            border: none;
+            padding: 10px;
+        }
+
+        .section4 button {
+            color: white;
+            border: 1px solid #F1DB25;
+            padding: 10px 25px;
+            margin-top: 20px;
+            background-color: #F1DB25;
+        }
+
+        button:hover {
+            background-color: transparent;
+        }
+
+        .section5 {
+            text-align: center;
+            padding: 3% 0 2% 0;
+        }
+
+        .section5img {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding-top: 3%;
+        }
+
+        .guard1 {
+            height: 250px;
+            width: 200px;
+            background-image: url(t1.jpg);
+            background-size: cover;
+        }
+
+        .guard2 {
+            height: 250px;
+            width: 200px;
+            background-image: url(t2.jpg);
+            background-size: cover;
+        }
+
+        .guard3 {
+            height: 250px;
+            width: 200px;
+            background-image: url(t3.jpg);
+            background-size: cover;
+        }
+
+        .tab1 {
+            width: 100%;
+            height: 70px;
+            background-color: rgba(0, 0, 0, 0.555);
+            position: relative;
+            top: 180px;
+            text-align: center;
+
+        }
+
+        .tab1 h3 {
+            color: white;
+            padding-top: 5px;
+        }
+
+        .tab1 p {
+            color: white;
+        }
+
+        footer {
+            background-color: black;
+            display: flex;
+            gap: 80px;
+            padding: 5% 5%;
+        justify-content: center;}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <p><i class="fa-solid fa-location-dot" style="color: #FFF700;"></i> Lorem ipsum dolor sit amet. </p>
+        <p><i class="fa-solid fa-phone" style="color: #FFF700;"></i> Call:+01 23456789
+        </p>
+        <p><i class="fa-solid fa-envelope" style="color: #FFF700;"></i> demo@gmail.com </p>
+    </nav>
+    <header>
+        <div class="section">
+            <div class="navbar">
+                <h2>Guarder</h2>
+                <div class="anchor">
+                    <a href="" style="background-color:#1C1C1C;;">HOME</a>
+                    <a href="">ABOUT</a>
+                    <a href="">SERVICES</a>
+                    <a href="">GUARDS</a>
+                    <a href="">CONTACT US</a>
+                </div>
+            </div>
+            <div class="text">
+                <h1>YOUR SAFETY <br> <span style="color: #FFF700;">OUR RESPONSIBILTY </span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium modi maiores quisquam magnam
+                    <br> nihil labore voluptatibus accusantium suscipit consectetur repellat!
+                </p>
+                <button style="background-color: white; color: black ; padding: 10px 15px;border: none;">READ
+                    MORE</button>
+                <button
+                    style="background-color:#F1DB25; color: white ; padding: 10px 15px;border: none; margin-left: 10px;">Get
+                    A Quote</button>
+                <div class="circle">
+                    <div class="white"></div>
+                    <div class="yellow"></div>
+                    <div class="yellow"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="section1">
+        <div class="img1">
+            <img src="about-img.jpg" alt="">
+        </div>
+        <div class="part">
+            <h3>WHO ARE WE?</h3>
+            <div id="bar"> </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam tenetur in unde consequuntur nulla
+                cumque dignissimos, laudantium delectus, praesentium dolores a quae nesciunt sapiente ratione placeat
+                explicabo. Adipisci deserunt laborum dolore quod quam, quos praesentium velit. Natus unde itaque sit.
+            </p>
+            <button>READ MORE</button>
+        </div>
+    </div>
+    <div class="section2">
+        <div class="services">
+            <h2>OUR SERVICES</h2>
+            <div class="bar1"> </div>
+            <div class="parts">
+                <div class="home">
+                    <div class="img2">
+                        <img src="s1.svg" alt="">
+                    </div>
+                    <h3>HOME SECURITY</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem enim aliquam ea accusantium fugit
+                        non, eveniet cum eaque optio molestiae!</p>
+                    <button>READ MORE</button>
+                </div>
+                <div class="home">
+                    <div class="img2">
+                        <img src="s2.svg" alt="">
+                    </div>
+                    <h3>OFFICE SECURITY</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem enim aliquam ea accusantium fugit
+                        non, eveniet cum eaque optio molestiae!</p>
+                    <button>READ MORE</button>
+                </div>
+                <div class="home">
+                    <div class="img2">
+                        <img src="s3.svg" alt="">
+                    </div>
+                    <h3>BODYGUARD</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem enim aliquam ea accusantium fugit
+                        non, eveniet cum eaque optio molestiae!</p>
+                    <button>READ MORE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section3">
+        <div class="icon1">
+            <i class="fa-solid fa-angle-up fa-rotate-270" style="color: #FFFFFF;"></i>
+        </div>
+        <h2>WHAT IS SAYS OUR CLIENTS</h2>
+        <div class="bar1"></div>
+        <div class="img3">
+            <img src="client.png" alt="">
+        </div>
+        <p><b>Minim Venlam</b></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sapiente accusantium vitae blanditiis sit
+            quisquam modi tempora distinctio. <br> Possimus est mollitia eveniet ullam et? Ipsam excepturi ipsum
+            necessitatibus odit recusandae!</p>
+        <div class="icon2">
+            <i class="fa-solid fa-angle-up fa-rotate-90" style="color: #FFFFFF;"></i>
+        </div>
+    </div>
+    <div class="section4">
+        <h2>GET IN TOUCH</h2>
+        <div class="bar1"> </div>
+        <table>
+            <input type="text" placeholder="FULL NAME"> <br>
+            <input type="text" placeholder="EMAIL"> <br>
+            <input type="text" placeholder="PHONE NUMBER"> <br>
+            <input type="text" placeholder="MESSAGE"> <br>
+            <button>SEND</button>
+        </table>
+    </div>
+    <div class="section5">
+        <h1>OUR GUARDS</h1>
+        <div class="bar1">
+
+        </div>
+        <div style="color: gray;padding-top: 3%;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, ipsa. Sint reiciendis veniam eos,
+                excepturi maxime nobis assumenda
+                <br>
+                numquam illum deleniti doloremque digni
+            </p>
+        </div>
+        <div class="section5img">
+            <div class="guard1">
+                <div class="tab1">
+                    <H3>Martin Anderson</H3>
+                    <p>Supervisor</p>
+                </div>
+
+            </div>
+            <div class="guard2">
+                <div class="tab1">
+                    <H3>
+                        Deny Buttler
+
+                    </H3>
+                    <p>
+                        Supervisor
+                    </p>
+                </div>
+
+            </div>
+            <div class="guard3">
+                <div class="tab1">
+                    <h3>Nathan Mcpherson</h3>
+                    <p>Supervisor</p>
+                </div>
+
+            </div>
+        </div>
+        <button style="background-color: yellow;color: white;padding: 5px 15px ;border: none;margin-top: 3%;">view
+            all</button>
+    </div>
+    <footer>
+        <div class="last">
+            <h2 style="color: white;">Guarder</h2>
+            <p style="color: white;"> dolor sit amet consectetur
+                <br>
+                adipisicing elit. Repellat
+                <br>
+                aperiam dolorem at suscipit
+                <br>
+                vitae aliquid
+            </p>
+        </div>
+        <div class="last">
+            <h3 style="color: white;">
+                Useful link
+            </h3>
+            <p style="color: white;"> dolor sit amet consectetur
+                <br>
+                adipisicing elit. Repellat
+                <br>
+                aperiam dolorem at suscipit
+                <br>
+                vitae aliquid
+            </p>
+
+        </div>
+        <div class="last">
+            <h3 style="color: white;">
+                Contact Us
+            </h3>
+            <i class="fa-solid fa-location-dot" style="color: #e2e5e9;"></i>
+            <span style="color: white;">Lorem ispum dolor sit amet</span>
+
+            <br><i class="fa-solid fa-phone" style="color: #edeff2;"></i>
+            <span style="color: white;"> call:+01 0123456790</span>
+
+            <br><i class="fa-solid fa-envelope" style="color: #ebedef;"></i>
+            <span style="color: white;">demo@gmail.com</span>
+
+        </div>
+        <div class="last">
+            <h3 style="color: white;">Newsletter</h3>
+            <button style="background-color: white;color: grey;border: none;padding: 5px 30px 5px 2px;border-radius: 25px;margin-top: 4%;">Enter your email</button>
+            <br>
+            <button style="background-color: yellow;color: white;border: none;padding: 5px 15px;border-radius: 25px;margin-top: 4%;margin-bottom: 8%;">Subscribe</button>
+            <br>
+            <i class="fa-brands fa-facebook" style="color: #edeff3;"></i>
+            <i class="fa-brands fa-twitter" style="color: #fafcff;"></i>
+            <i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+
+        </div>
+    </footer>
+</body>
+
+</html>
